@@ -1,5 +1,14 @@
 <h1>Create an Article</h1>
 
+  <% if @article.errors.any? %>
+  <h2> The Following errors prevented the article from getting created </h2>
+    <ul>
+      <% @article.errors.full_messages.each { |msg| %>
+        <li><%= msg %></li>
+        <% } %>
+    </ul>
+  <% end %>
+
 
 <%= form_for @article do |form| %>
   <p>
@@ -7,9 +16,10 @@
     <%= form.text_field :title %>
   </p>
   <p>
-  <%= form.label :description %><br>
-  <%= form.text_area :description %>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
   </p>
-  <%= form.submit %>
-
+  <p>
+    <%= form.submit %>
+  </p>
 <% end %>
