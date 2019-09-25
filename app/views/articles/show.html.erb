@@ -7,4 +7,5 @@
   Description: <%= @article.description%>
 </p>
 
-<%= link_to 'Articles', articles_path %>
+<%= link_to 'Edit article', edit_article_path(@article)%>
+<%= link_to 'Go Back', articles_path %>
