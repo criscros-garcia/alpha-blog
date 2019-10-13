@@ -6,3 +6,5 @@ module ApplicationHelper
     image_tag(gravatar_url, alt: user.username, class:'img-circle')
   end
 end
+
+# https://s.gravatar.com/avatar/60bb888c5024730e8e0470d193c639cf?s=80
